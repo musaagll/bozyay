@@ -9,7 +9,7 @@ const OG_IMAGE = `${BASE_URL}/og-image.svg`;
 export const metadata: Metadata = {
   title: "İletişim | BOZ YAY Bursa",
   description:
-    "BOZ YAY ile iletişime geçin. Telefon: 0531 501 25 84. Adres: Çalı, 2. Sk., 16110 Nilüfer/Bursa. WhatsApp ile de ulaşabilirsiniz.",
+    "BOZ YAY ile iletişime geçin. Telefon: 0531 501 25 84. Adres: Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa. WhatsApp ile de ulaşabilirsiniz.",
   alternates: { canonical: `${BASE_URL}/iletisim` },
   openGraph: {
     type: "website",
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     siteName: "BOZ YAY",
     title: "İletişim | BOZ YAY Bursa",
     description:
-      "BOZ YAY ile iletişime geçin. Telefon: 0531 501 25 84. Adres: Çalı, 2. Sk., 16110 Nilüfer/Bursa.",
+      "BOZ YAY ile iletişime geçin. Telefon: 0531 501 25 84. Adres: Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa.",
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "BOZ YAY — İletişim" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "İletişim | BOZ YAY Bursa",
-    description: "0531 501 25 84 — Çalı, 2. Sk., 16110 Nilüfer/Bursa",
+    description: "0531 501 25 84 — Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa",
     images: [OG_IMAGE],
   },
 };
@@ -97,11 +97,11 @@ export default function IletisimPage() {
             <div className="p-8">
               <p className="text-[11px] text-brand-yellow uppercase tracking-widest font-semibold mb-3">Adres</p>
               <address className="not-italic text-brand-white font-medium leading-relaxed mb-5">
-                BOZ YAY Çalı, 2. Sk.,<br />
-                16110, 16130 Nilüfer/Bursa
+                Çalı Mah. 2. (410) Sk. No:6<br />
+                16110 Nilüfer/Bursa
               </address>
               <a
-                href="https://maps.google.com/?q=Çalı+2+Sokak+Nilüfer+Bursa"
+                href="https://maps.google.com/?q=Çalı+Mahallesi+410+Sokak+No6+Nilüfer+Bursa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline text-xs py-3 px-5 inline-flex"

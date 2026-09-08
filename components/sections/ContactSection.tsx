@@ -53,7 +53,7 @@ export default function ContactSection() {
         <div className="border border-brand-border p-7 reveal reveal-delay-2 mb-10">
           <p className="text-[11px] text-brand-yellow uppercase tracking-widest font-semibold mb-2">Adres</p>
           <address className="not-italic text-brand-white font-medium">
-            BOZ YAY Çalı, 2. Sk., 16110, 16130 Nilüfer/Bursa
+            BOZ YAY Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa
           </address>
         </div>
 

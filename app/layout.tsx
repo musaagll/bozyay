@@ -100,7 +100,7 @@ const organizationSchema = {
   email: "info@bozyay.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Çalı, 2. Sk.",
+    streetAddress: "Çalı Mahallesi 2. (410) Sokak No:6",
     postalCode: "16110",
     addressLocality: "Nilüfer",
     addressRegion: "Bursa",

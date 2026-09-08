@@ -77,7 +77,7 @@ export default function Footer() {
               WhatsApp ile Yaz
             </a>
             <address className="not-italic text-sm text-brand-light leading-relaxed">
-              Çalı, 2. Sk., 16110<br />Nilüfer / Bursa
+              Çalı Mah. 2. (410) Sk. No:6<br />Nilüfer / Bursa
             </address>
           </div>
         </div>
