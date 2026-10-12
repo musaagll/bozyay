@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/contact";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { products } from "@/lib/products";
@@ -53,7 +54,7 @@ export default function ProductsPage() {
             <h2 className="text-xl font-black text-brand-white mb-1">İhtiyacınız listede yok mu?</h2>
             <p className="text-sm text-brand-light">Her talebi değerlendiriyor, özel üretim çözümleri geliştiriyoruz.</p>
           </div>
-          <a href="tel:+905315012584" className="btn-primary shrink-0">0531 501 25 84</a>
+          <a href={PHONE_HREF} className="btn-primary shrink-0">{PHONE_DISPLAY}</a>
         </div>
       </section>
     </>

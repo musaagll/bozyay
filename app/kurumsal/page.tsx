@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_URL } from "@/lib/contact";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -75,8 +76,8 @@ export default function KurumsalPage() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="tel:+905315012584" className="btn-primary">0531 501 25 84</a>
-              <a href="https://wa.me/905315012584" target="_blank" rel="noopener noreferrer" className="btn-outline">WhatsApp</a>
+              <a href={PHONE_HREF} className="btn-primary">{PHONE_DISPLAY}</a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-outline">WhatsApp</a>
             </div>
           </div>
 

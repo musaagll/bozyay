@@ -1,3 +1,4 @@
+import { PHONE_SCHEMA, WHATSAPP_URL } from "@/lib/contact";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -96,7 +97,7 @@ const organizationSchema = {
     height: 200,
   },
   image: OG_IMAGE,
-  telephone: "+90-531-501-25-84",
+  telephone: PHONE_SCHEMA,
   email: "info@bozyay.com",
   address: {
     "@type": "PostalAddress",
@@ -112,11 +113,11 @@ const organizationSchema = {
     longitude: "28.9795",
   },
   sameAs: [
-    `https://wa.me/905315012584`,
+    WHATSAPP_URL,
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+90-531-501-25-84",
+    telephone: PHONE_SCHEMA,
     contactType: "customer service",
     availableLanguage: "Turkish",
   },

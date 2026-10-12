@@ -1,4 +1,5 @@
 "use client";
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_URL } from "@/lib/contact";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -72,18 +73,18 @@ export default function Header() {
           {/* Right: Phone + Hamburger */}
           <div className="flex items-center gap-4">
             <a
-              href="tel:+905315012584"
+              href={PHONE_HREF}
               className="hidden lg:flex items-center gap-2 text-xs font-bold text-brand-white hover:text-brand-yellow transition-colors duration-200"
-              aria-label="Ara: 0531 501 25 84"
+              aria-label={`Ara: ${PHONE_DISPLAY}`}
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.4 1.13 2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              0531 501 25 84
+              {PHONE_DISPLAY}
             </a>
 
             <a
-              href="https://wa.me/905315012584"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden lg:inline-flex btn-primary items-center gap-2"
@@ -125,11 +126,11 @@ export default function Header() {
             </Link>
           ))}
           <div className="pt-6 flex flex-col gap-3">
-            <a href="tel:+905315012584" className="btn-primary justify-center text-center">
-              0531 501 25 84
+            <a href={PHONE_HREF} className="btn-primary justify-center text-center">
+              {PHONE_DISPLAY}
             </a>
             <a
-              href="https://wa.me/905315012584"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline justify-center text-center inline-flex items-center gap-2"
@@ -143,7 +144,7 @@ export default function Header() {
 
       {/* Mobile sticky WhatsApp */}
       <a
-        href="https://wa.me/905315012584"
+        href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-5 right-5 z-40 lg:hidden w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center shadow-lg"

@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_URL } from "@/lib/contact";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -6,6 +7,11 @@ import Breadcrumb from "@/components/Breadcrumb";
 
 const BASE_URL = "https://www.bozyay.com";
 const DEFAULT_OG = `${BASE_URL}/og-image.svg`;
+
+// Images uploaded from the Gomp panel are site paths; Google wants full URLs.
+function absolute(src: string) {
+  return !src ? DEFAULT_OG : src.startsWith("http") ? src : `${BASE_URL}${src}`;
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -20,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProductBySlug(slug);
   if (!product) return { title: "Ürün Bulunamadı" };
 
-  const ogImage = product.heroImage || DEFAULT_OG;
+  const ogImage = absolute(product.heroImage);
   const url = `${BASE_URL}/urunler/${slug}`;
 
   return {
@@ -64,7 +70,7 @@ export default async function ProductDetailPage({ params }: Props) {
     "@type": "Product",
     name: product.name,
     description: product.fullDesc,
-    image: product.heroImage || DEFAULT_OG,
+    image: absolute(product.heroImage),
     url: `${BASE_URL}/urunler/${slug}`,
     brand: {
       "@type": "Brand",
@@ -191,11 +197,11 @@ export default async function ProductDetailPage({ params }: Props) {
                 <p className="text-sm text-brand-light mb-6 leading-relaxed">
                   Telefon veya WhatsApp üzerinden ulaşabilirsiniz.
                 </p>
-                <a href="tel:+905315012584" className="btn-primary w-full justify-center mb-3">
-                  0531 501 25 84
+                <a href={PHONE_HREF} className="btn-primary w-full justify-center mb-3">
+                  {PHONE_DISPLAY}
                 </a>
                 <a
-                  href="https://wa.me/905315012584"
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline w-full justify-center text-sm"

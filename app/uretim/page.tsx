@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_URL } from "@/lib/contact";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -143,8 +144,8 @@ export default function UretimPage() {
               <p className="text-sm text-brand-light">Telefon veya WhatsApp üzerinden ulaşabilirsiniz.</p>
             </div>
             <div className="flex gap-3 shrink-0">
-              <a href="tel:+905315012584" className="btn-primary">0531 501 25 84</a>
-              <a href="https://wa.me/905315012584" target="_blank" rel="noopener noreferrer" className="btn-outline">WhatsApp</a>
+              <a href={PHONE_HREF} className="btn-primary">{PHONE_DISPLAY}</a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-outline">WhatsApp</a>
             </div>
           </div>
         </div>

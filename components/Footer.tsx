@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_URL } from "@/lib/contact";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -63,13 +64,13 @@ export default function Footer() {
           <p className="text-[11px] font-bold text-brand-yellow tracking-widest uppercase mb-5">İletişim</p>
           <div className="space-y-3">
             <a
-              href="tel:+905315012584"
+              href={PHONE_HREF}
               className="block text-sm text-brand-light hover:text-brand-yellow transition-colors duration-200 font-medium"
             >
-              0531 501 25 84
+              {PHONE_DISPLAY}
             </a>
             <a
-              href="https://wa.me/905315012584"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="block text-sm text-brand-light hover:text-brand-yellow transition-colors duration-200"

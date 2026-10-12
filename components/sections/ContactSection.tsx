@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_URL } from "@/lib/contact";
 export default function ContactSection() {
   return (
     <section className="bg-brand-dark border-t border-brand-border py-20 lg:py-28">
@@ -18,12 +19,12 @@ export default function ContactSection() {
           <div className="p-8 border-b md:border-b-0 md:border-r border-brand-border reveal">
             <p className="text-[11px] text-brand-yellow uppercase tracking-widest font-semibold mb-3">Telefon</p>
             <a
-              href="tel:+905315012584"
+              href={PHONE_HREF}
               className="text-2xl font-black text-brand-white hover:text-brand-yellow transition-colors duration-200 block mb-5"
             >
-              0531 501 25 84
+              {PHONE_DISPLAY}
             </a>
-            <a href="tel:+905315012584" className="btn-primary text-xs py-3 px-5">
+            <a href={PHONE_HREF} className="btn-primary text-xs py-3 px-5">
               HEMEN ARA
             </a>
           </div>
@@ -35,7 +36,7 @@ export default function ContactSection() {
               Mesajınızı, teknik çiziminizi veya fotoğrafınızı WhatsApp üzerinden iletebilirsiniz.
             </p>
             <a
-              href="https://wa.me/905315012584"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline text-xs py-3 px-5 inline-flex items-center gap-2"

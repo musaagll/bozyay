@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "id": "iletisim",
+      "path": "content/iletisim.json",
+      "title": "Telefon ve WhatsApp",
+      "description": "Sitedeki bütün arama ve WhatsApp butonları (adres ve harita kodda)",
+      "previewPath": "/iletisim",
+      "fields": [
+        { "key": "phone", "label": "Telefon", "type": "text", "required": true, "max": 20, "pattern": "^0\\d{3} \\d{3} \\d{2} \\d{2}$", "hint": "Bu biçimde yazın: 0531 501 25 84. Arama linkleri buradan oluşur" },
+        { "key": "whatsappNumber", "label": "WhatsApp numarası", "type": "text", "required": true, "pattern": "^\\d{11,15}$", "hint": "Sadece rakam, ülke koduyla: 905315012584" }
+      ]
+    },
+    {
+      "id": "urunler",
+      "path": "content/urunler.json",
+      "title": "Ürünler",
+      "description": "Ürünler sayfası, ana sayfadaki liste ve her ürünün kendi sayfası",
+      "previewPath": "/urunler",
+      "fields": [
+        {
+          "key": "products",
+          "label": "Ürünler",
+          "type": "list",
+          "itemLabel": "name",
+          "idKey": "slug",
+          "newItemId": "slug:name",
+          "minItems": 1,
+          "maxItems": 20,
+          "hint": "Yeni ürün eklenince kendi sayfası (bozyay.com/urunler/...) otomatik oluşur",
+          "fields": [
+            { "key": "name", "label": "Ürün adı", "type": "text", "required": true, "max": 40 },
+            { "key": "h1", "label": "Sayfa başlığı", "type": "text", "required": true, "max": 60 },
+            { "key": "shortDesc", "label": "Kısa açıklama (listelerde)", "type": "textarea", "required": true, "max": 120 },
+            { "key": "fullDesc", "label": "Detaylı açıklama (ürün sayfasında)", "type": "textarea", "required": true, "max": 800 },
+            { "key": "usageAreas", "label": "Kullanım alanları", "type": "strings", "max": 80, "minItems": 1, "maxItems": 12 },
+            { "key": "productionFeatures", "label": "Üretim özellikleri", "type": "strings", "max": 100, "minItems": 1, "maxItems": 12 },
+            { "key": "metaTitle", "label": "Google başlığı", "type": "text", "required": true, "max": 70, "hint": "Arama sonuçlarında görünen başlık (60 karakter civarı ideal)" },
+            { "key": "metaDesc", "label": "Google açıklaması", "type": "textarea", "required": true, "max": 170, "hint": "Arama sonuçlarındaki açıklama (150-160 karakter ideal)" },
+            { "key": "heroImage", "label": "Paylaşım görseli", "type": "image", "dir": "public/urunler", "maxWidth": 1400, "hint": "WhatsApp, sosyal medya ve Google'da ürün linki paylaşılınca görünen görsel" }
+          ]
+        }
+      ]
+    }
+  ]
+}

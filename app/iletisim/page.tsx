@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_URL } from "@/lib/contact";
 import type { Metadata } from "next";
 import Link from "next/link";
 import WaIcon from "@/components/icons/WaIcon";
@@ -9,7 +10,7 @@ const OG_IMAGE = `${BASE_URL}/og-image.svg`;
 export const metadata: Metadata = {
   title: "İletişim | BOZ YAY Bursa",
   description:
-    "BOZ YAY ile iletişime geçin. Telefon: 0531 501 25 84. Adres: Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa. WhatsApp ile de ulaşabilirsiniz.",
+    `BOZ YAY ile iletişime geçin. Telefon: ${PHONE_DISPLAY}. Adres: Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa. WhatsApp ile de ulaşabilirsiniz.`,
   alternates: { canonical: `${BASE_URL}/iletisim` },
   openGraph: {
     type: "website",
@@ -18,13 +19,13 @@ export const metadata: Metadata = {
     siteName: "BOZ YAY",
     title: "İletişim | BOZ YAY Bursa",
     description:
-      "BOZ YAY ile iletişime geçin. Telefon: 0531 501 25 84. Adres: Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa.",
+      `BOZ YAY ile iletişime geçin. Telefon: ${PHONE_DISPLAY}. Adres: Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa.`,
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "BOZ YAY — İletişim" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "İletişim | BOZ YAY Bursa",
-    description: "0531 501 25 84 — Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa",
+    description: `${PHONE_DISPLAY} — Çalı Mah. 2. (410) Sk. No:6, 16110 Nilüfer/Bursa`,
     images: [OG_IMAGE],
   },
 };
@@ -65,12 +66,12 @@ export default function IletisimPage() {
             <div className="p-8 border-b md:border-b-0 md:border-r border-brand-border">
               <p className="text-[11px] text-brand-yellow uppercase tracking-widest font-semibold mb-3">Telefon</p>
               <a
-                href="tel:+905315012584"
+                href={PHONE_HREF}
                 className="text-2xl font-black text-brand-white hover:text-brand-yellow transition-colors duration-200 block mb-5"
               >
-                0531 501 25 84
+                {PHONE_DISPLAY}
               </a>
-              <a href="tel:+905315012584" className="btn-primary text-xs py-3 px-5">
+              <a href={PHONE_HREF} className="btn-primary text-xs py-3 px-5">
                 HEMEN ARA
               </a>
             </div>
@@ -82,7 +83,7 @@ export default function IletisimPage() {
                 Mesaj, teknik çizim veya fotoğrafınızı WhatsApp üzerinden iletebilirsiniz.
               </p>
               <a
-                href="https://wa.me/905315012584"
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline text-xs py-3 px-5 inline-flex items-center gap-2"

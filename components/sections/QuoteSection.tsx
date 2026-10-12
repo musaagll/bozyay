@@ -1,3 +1,4 @@
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_URL } from "@/lib/contact";
 export default function QuoteSection() {
   return (
     <section className="bg-brand-black border-t border-brand-border py-20 lg:py-28" id="iletisim">
@@ -15,13 +16,13 @@ export default function QuoteSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 reveal reveal-delay-3">
             <a
-              href="tel:+905315012584"
+              href={PHONE_HREF}
               className="btn-primary flex-1 justify-center text-center"
             >
-              0531 501 25 84
+              {PHONE_DISPLAY}
             </a>
             <a
-              href="https://wa.me/905315012584"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline flex-1 justify-center text-center items-center gap-2"
